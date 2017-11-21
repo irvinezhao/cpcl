@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+template {
+  display: none;
+  /* IE support */
+}
+
+body {
+  font-family: FSElliotPro-Bold, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.hkex-widgets {
+  background: #eee;
+  padding: 4rem;
+}
+
+/** clear floating **/
+
+.hkex-widgets::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.card {
+  display: inline-block;
+  float: left;
+  /** optional, better alignment for multi-row use cases -> or use flexbox */
+  background: #fff;
+  width: 375px;
+  height: 500px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .15), 0 0 4px 0 rgba(0, 0, 0, .2), 0 12px 12px 0 rgba(0, 0, 0, .15);
+  margin: .5rem 1rem;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.card-title {
+  font-family: FSElliotPro-Bold;
+  font-size: 18px;
+  color: #13426B;
+  letter-spacing: 0;
+  line-height: 48px;
+  border-left: 5px red solid;
+  padding: 0 0 0 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card[draggable=true] {
+  cursor: move;
+}
+
+.card[draggable=false] {
+  cursor: not-allowed;
+}
+
+/* Prevent the text contents of draggable elements from being selectable. Also from Elements which are explicit not draggable */
+
+.hkex-widgets {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.card:hover {
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, .1), 0 0 36px 0 rgba(0, 0, 0, .15), 0 36px 36px 0 rgba(0, 0, 0, .2);
+}
+
+.card > img {
+  padding: 0;
+  margin: 0;
+}
+
+.card-text {
+  padding: .75rem;
+}
+
+.card-text > h3 {
+  margin: 0 0 .25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s ease-in-out;
+}
+
+.card-text > h3:hover {
+  color: green;
+}
+
+.card-text > span {
+  margin: 0;
+  font-size: .8125rem;
+  line-height: 1rem;
+  font-weight: 200;
+}
+
+.card-placeholder {
+  position: fixed;
+  display: inline-block;
+  background: #ddd;
+}
+
+.card.moving {
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0), 0 0 4px 0 rgba(0, 0, 0, 0), 0 12px 12px 0 rgba(0, 0, 0, 0);
+}
+
+.card-head {
+  background: #eee;
+  padding: 2.5rem 1rem;
+  text-align: center;
+  font-family: Menlo, "Courier New";
+  position: relative;
+}

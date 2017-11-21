@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HKEx CPCL</title>
+	<link rel="stylesheet" type="text/css" href="./src/dragable-control/index.css">
+	<link rel="stylesheet" type="text/css" href="./src/calendar/calendar.css">
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/moment/min/moment.min.js"></script>
+	<script src="./src/dragable-control/index.js"></script>
+	<script src="./src/calendar/calendar.js"></script>
+</head>
+
+<body>
+	<div class="hkex-widgets">
+		<div class="card-placeholder tpl-placeholder">
+		</div>
+		<!-- cards to sort -->
+		<div class="card" draggable="true">
+			<div class="card-title">HANG SENG INDEX</div>
+			<div class="card-text">
+				<h3>Title</h3>
+				<span>Block 1</span>
+			</div>
+		</div>
+		<div class="card" draggable="true">
+			<div class="card-title">NEWS</div>
+			<div class="card-text">
+				<h3>Title</h3>
+				<span>Block 2</span>
+			</div>
+		</div>
+		<div class="card" draggable="true">
+			<div class="card-title">HKEX TRADING CALENDAR</div>
+			<div id="calendar"></div>
+		</div>
+		<div class="card" draggable="true">
+			<div class="card-title">QUICK LINKS</div>
+			<div class="card-text">
+				<h3>Title</h3>
+				<span>Block 4</span>
+			</div>
+		</div>
+		<div class="card" draggable="true">
+			<div class="card-title">whats on</div>
+			<div class="card-text">
+				<h3>Title</h3>
+				<span>Block 5</span>
+			</div>
+		</div>
+
+		<!-- a card that is not draggable -->
+		<div class="card" title="not draggable. sorry ;-)" draggable="false">
+			<div class="card-title">faqs</div>
+			<div class="card-text">
+				<h3>not draggable. sorry ;-)</h3>
+				<span>Block 6</span>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
