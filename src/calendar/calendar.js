@@ -35,7 +35,7 @@
 					this.header = createElement('div', 'header');
 					this.header.className = 'header';
 
-					this.title = createElement('h1');
+					this.title = createElement('h1', 'calendar-month-year');
 
 					var right = createElement('div', 'right');
 					right.addEventListener('click', function () { self.nextMonth(); });

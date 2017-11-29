@@ -1,0 +1,115 @@
+.hkex-left-menu  .logo {
+    border-bottom: 1px solid #5D7C9D;
+    margin: 0 20px;
+    height: 75px;
+    line-height: 75px;
+}
+
+.hkex-left-menu  .logo img {
+    height: 75px;
+}
+
+.menu-tooltip {
+    color:  #7490AD;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 25px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.hkex-left-menu .menu {
+    list-style: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.hkex-left-menu .menu li{
+    min-height: 49px;
+    line-height: 49px;
+    padding: 0;
+    margin: 0;
+}
+.hkex-left-menu .menu li .sub-menu {
+    display: none;
+}
+.hkex-left-menu .menu li input:checked ~ label ~ .sub-menu {
+    display: block;
+    display: block;
+    list-style: none;
+    font-weight: normal;
+    background: rgb(5, 50, 88);
+}
+.hkex-left-menu .menu li input {
+    display: none;
+}
+.hkex-left-menu .menu li.has-sub-menu label::after {
+    content: '';
+    background-image: url('../images/open.png');
+    background-size: 8px 8px;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+}
+.hkex-left-menu .menu li input:checked ~ label::after{
+    background-image: url('../images/collapse.png');
+}
+.hkex-left-menu .menu li.active {
+    background: #5D7C9D;
+    border-left: 3px solid red;
+}
+.hkex-left-menu .menu label {
+    width: 100%;
+    height: 49px;
+    line-height: 49px;
+    margin: 0;
+    padding-left: 50px;
+    background: none;
+    color: #FFF;
+    position: relative;
+    display: inline-block
+}
+
+.hkex-left-menu .menu label::before{
+    content: '';
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    background-size: 23px 20px;
+    background-repeat: no-repeat;
+    left: 12px;
+    top: 15px;
+}
+.hkex-left-menu .menu .dashboard::before {
+    background-image: url('../images/dashboard.png');
+}
+.hkex-left-menu .menu .general::before {
+    background-image: url('../images/general-services.png');
+}
+.hkex-left-menu .menu .clearing::before {
+    background-image: url('../images/clearing.png');
+}
+.hkex-left-menu .menu .csd::before {
+    background-image: url('../images/csd.png');
+}
+.hkex-left-menu .menu .risk::before {
+    background-image: url('../images/risk.png');
+}
+.hkex-left-menu .menu .collateral::before {
+    background-image: url('../images/collateral.png');
+}
+
+.hkex-left-menu .menu .downloads::before {
+    background-image: url('../images/downloads.png');
+}
+.hkex-left-menu .menu .technical::before {
+    background-image: url('../images/technical.png');
+}
+.hkex-left-menu .menu .settings::before {
+    background-image: url('../images/settings.png');
+}

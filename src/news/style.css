@@ -1,0 +1,45 @@
+.news {
+    position: relative;
+}
+
+.news-content {
+    padding-left: 20px;
+}
+
+.news-detail {
+    width: 333px;
+    font-size: 14px;
+    padding: 6px 50px 0 0;
+    line-height: 1.2rem;
+    background-position: 100% 18%;
+    background-repeat: no-repeat;
+    background-size: auto 1em;
+    border: 0;
+    color: #10416C;
+    outline: 0;
+    text-decoration: none;
+    display: inline-block;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAALCAYAAAC3ZUeVAAAAAXNSR0IArs4c6QAAALFJREFUCB1jeK7hfPqNjosmAxJgYmZkqv/95/+GTxrOwjBxJrHru7cxMTDM/MbAsOa/cRorSALIZ2AQv7G3j+E/w92XX+9MBfEZQQQIgFS9+HpnD+N/xnVwQZDES03nrH//GCLggi81nC3/MfxfzsbCYgs28522ixxIgJGRKUL4yq7HDK+0Q3leqDtdeKnuHA0yAgSY/v59u5CBkXGr+M29SyFCQPKllnPM////4WaDJADSIj29AEEbVQAAAABJRU5ErkJggg==');
+}
+
+
+.news-content:nth-child(even) {
+    background-color: #F2F6F8;
+}
+
+.news-content:first-child {
+    margin-top: 20px;
+}
+
+.news-date {
+    font-size: 11px;
+    padding: 4px 0 10px 0;
+    margin: 0;
+}
+
+.news-more {
+    position: absolute;
+    right: 20px;
+    top: 400px;
+}
+

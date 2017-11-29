@@ -13,14 +13,14 @@ body {
   margin: 0;
 }
 
-.hkex-widgets {
+.hkex-widgets-section {
   background: #eee;
-  padding: 4rem;
+  padding: 30px;
 }
 
 /** clear floating **/
 
-.hkex-widgets::after {
+.hkex-widgets-section::after {
   clear: both;
   content: "";
   display: table;
@@ -34,7 +34,7 @@ body {
   width: 375px;
   height: 500px;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, .15), 0 0 4px 0 rgba(0, 0, 0, .2), 0 12px 12px 0 rgba(0, 0, 0, .15);
-  margin: .5rem 1rem;
+  margin: 0 30px 30px 0;
   transition: box-shadow .2s ease-in-out;
 }
 
@@ -60,7 +60,7 @@ body {
 
 /* Prevent the text contents of draggable elements from being selectable. Also from Elements which are explicit not draggable */
 
-.hkex-widgets {
+.hkex-widgets-section {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;

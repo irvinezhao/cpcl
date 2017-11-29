@@ -1,0 +1,10 @@
+.hkex-left-menu{
+	width: 253px;
+    height: 1643px;
+    background: #10416C;
+    float: left;
+    overflow: hidden;
+}
+.hkex-right {
+	margin-left: 253px;
+}

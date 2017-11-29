@@ -1,0 +1,125 @@
+.market-data {
+    position: relative
+}
+.market-data .main-data {
+    height: 28px;
+    line-height: 28px;
+    color: #10416C;
+    font-size: 28px;
+    font-weight: bold;
+
+}
+
+.market-data .growth-value {
+    font-size: 16px;
+    color: #389E64;
+}
+ 
+.date-types {
+    list-style: none;
+    font-size: 11px;
+    color:  #7D7D7D;
+    height: 28px;
+    line-height: 28px;
+    border-bottom: 1px solid #e3e3e3;
+    margin: 0;
+    margin-top: 16px;
+    padding: 0;
+    position: relative;
+}
+
+.date-types li {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    
+}
+.date-types li:not(:last-child) {
+    margin-right: 33px;
+}
+.date-types li input {
+    display: none;
+}
+.date-types li label {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.date-types li .content {
+    display: none;
+    position: absolute;
+    text-align: left;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+   
+
+}
+.date-types li input:checked ~ .content {
+    display: block;
+    
+}
+.date-types li input:checked ~ label{
+    cursor: pointer;
+    color: #10416C;
+}
+
+.date-types li input:checked ~ label::after{
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 0px;
+    display: inline-block;
+    width: 36px;
+    height: 3px;
+    background: red;
+
+}
+.last-updated {
+    color: #4A4A4A;
+    font-size: 11px; 
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #10416C;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 2px;
+}
+
+.area {
+    fill: rgba(180, 222, 242, 0.25);
+}
+
+.tooltip {
+    position: fixed;
+    text-align: center;
+    width: 109px;
+    height: 21px;
+    line-height: 21px;
+    padding: 2px;
+    font: 12px sans-serif;
+    border: 1px solid #D1DDE6;;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+
+/* .prev-close {
+    position: fixed;
+    top: 610px;
+    left: 1180px;
+    text-transform: none;
+} */

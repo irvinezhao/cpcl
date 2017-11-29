@@ -1,7 +1,7 @@
 (function ($) {
 	'use strict';
 	$(window).on("load", function () {
-		let element = document.querySelector(".hkex-widgets")
+		let element = document.querySelector(".hkex-widgets-section")
 
 		let draggableElements = element && element.querySelectorAll("[draggable=true]")
 		let activeDragElement;
@@ -9,7 +9,7 @@
 		let startElementRect;
 
 		// import placeholder
-		placeholderElement = element.querySelector('.tpl-placeholder');
+		placeholderElement = document.querySelector('.tpl-placeholder');
 
 		// Function responsible for sorting
 		const _onDragOver = function (event) {

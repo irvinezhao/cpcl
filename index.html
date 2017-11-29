@@ -6,62 +6,219 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>HKEx CPCL</title>
+	<link rel="stylesheet" type="text/css" href="./src/styles/layout.css">
 	<link rel="stylesheet" type="text/css" href="./src/dragable-control/index.css">
 	<link rel="stylesheet" type="text/css" href="./src/calendar/calendar.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/market-data.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/menu.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/top-section.css">
+	<link rel="stylesheet" type="text/css" href="./src/styles/main-board-section.css">
+	<link href="./src/video/video-js.css" rel="stylesheet">
+	<link href="./src/video/style.css" rel="stylesheet">
+	<link href="./src/news/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<div class='hkex-left-menu'>
+		<div class="logo">
+			<img src="./src/images/hkexlogo.png" alt="HKEX logo">
+		</div>
+		<div class="menu-tooltip">NAVIGATION</div>
+		<ul class="menu">
+			<li class='active'>
+				<input type="checkbox" name='menu' id='dashboard'>
+				<label for="dashboard" class='dashboard'>
+					Dashboard
+				</label>
+			</li>
+			<li class='has-sub-menu'>
+				<input type="checkbox" name='menu' id='general'>
+				<label for="general" class='general' href="#">General Services</label>
+				<ul class="sub-menu">
+					<li>Settlement Services</li>
+					<li>Depository Services</li>
+					<li>Common Nominee Services</li>
+				</ul>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='clearing'>
+				<label for="general" class='clearing' href="#">Clearing</label>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='csd'>
+				<label for="csd" class='csd' href="#">CSD</label>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='risk'>
+				<label for="risk" class='risk' href="#">Risk Management</label>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='collateral'>
+				<label for="collateral" class='collateral' href="#">Collateral Management </label>
+			</li>
+		</ul>
+		<div class="menu-tooltip">SUPPORT</div>
+		<ul class="menu">
+			<li>
+				<input type="checkbox" name='menu' id='downloads'>
+				<label for="downloads" class='downloads' href="#">Downloads</label>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='technical'>
+				<label for="technical" class='technical' href="#">Technical Standard</label>
+			</li>
+			<li>
+				<input type="checkbox" name='menu' id='settings'>
+				<label for="settings" class='settings' href="#">Settings</label>
+			</li>
+		</ul>
+	</div>
+	<div class="hkex-right">
+		<div class="topbar">
+			<ul>
+				<li class="topbar__welcome-block">
+					<p class="welcome-text">Good Morning, John!</p>
+				</li>
+				<li class="topbar__information-block">
+					<div class="top-information-chart">
+						<div class="small-chart-left">
+							<p class="stockname">SHCOMP</p>
+							<p class="stocknumber">3,195.91</p>
+							<p class="stockrate">-0.09%</p>
+						</div>
+						<div class="small-chart-right">
+							<div class="recent-rate red-font">-3.32</div>
+							<img class="small-chart-image" src="./src/images/small-chart1.png" alt="chart1">
+						</div>
+					</div>
+					<div class="top-information-chart">
+						<div class="small-chart-left">
+							<p class="stockname">HSI</p>
+							<p class="stocknumber">25,195.42</p>
+							<p class="stockrate">+1.19%</p>
+						</div>
+						<div class="small-chart-right">
+							<div class="recent-rate green-font">+281.92</div>
+							<img class="small-chart-image" src="./src/images/small-chart1.png" alt="chart1">
+						</div>
+					</div>
+				</li>
+				<li class="topbar__search-block">
+					<i class="search-icon"></i>
+					<div class="search-dropdown" id="search-dropdown">
+						<input type="text" class="search-input" id="topbarSearch" name="topbarSearch" title="search website" placeholder="Search Website">
+					</div>
+				</li>
+				<li class="topbar__notification-block">
+					<i class="notification-icon"></i>
+				</li>
+				<li class="topbar__profile-block">
+					<div class="profile-left">
+						<div class="username">John Applebee</div>
+						<div class="department">HSBC</div>
+					</div>
+					<div class="profile-right">
+						<img class="profile-image" src="./src/images/profile.png" alt="username">
+						<a class="profile-more-details" aria-haspopup="true" aria-expanded="false"></a>
+						<div class="profile-dropdown">
+							<a class="profile-dropdown-item">
+								<i class="profile-icon"></i>
+								<span>profile</span>
+							</a>
+							<a class="profile-dropdown-item">
+								<i class="settings-icon"></i>
+								<span>settings</span>
+							</a>
+							<a class="profile-dropdown-item">
+								<i class="signout-icon"></i>
+								<span>sign out</span>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="main-board-section">main section coming soon.</div>
+		<div class="hkex-widgets-section">
+			<div class="card-placeholder tpl-placeholder">
+			</div>
+			<!-- cards to sort -->
+			<div class="card market-data" draggable="true">
+				<div class="card-title">HANG SENG INDEX</div>
+				<div class="card-text">
+					<div class="main-data">
+						<span class='index-value'>25,773.31</span>
+						<span class='growth-value'>+79.99 (+0.39%)</span>
+					</div>
+					<ul class="date-types"></ul>
+					<div class="last-updated">Updated 03 Jul, 4:01 PM</div>
+				</div>
+			</div>
+			<div class="card" draggable="true">
+				<div class="card-title">NEWS</div>
+				<div class="news">
+					<div class="news-content">
+						<a class="news-detail" href="#">CFETS and HKEX's Bond Connect Joint Venture BCCL Launches Website</a>
+						<p class="news-date">30 Jun, 2017</p>
+					</div>
+					<div class="news-content">
+						<a class="news-detail" href="#">Report on Initial Public Offering Applications, Delisting and Suspensions (As at 30 June 2017)</a>
+						<p class="news-date">30 Jun, 2017</p>
+					</div>
+					<div class="news-content">
+						<a class="news-detail" href="#">HKEX to Introduce CNH- and US$-traded Gold Futures on 10 July</a>
+						<p class="news-date">29 Jun, 2017</p>
+					</div>
+					<div class="news-content">
+						<a class="news-detail" href="#">HKEX seeks views on a proposed New Board and a review of the Growth Enterprise Market</a>
+						<p class="news-date">29 Jun, 2017</p>
+					</div>
+					<a class="card-more news-more" href="#">View More</a>
+				</div>
+			</div>
+			<div class="card" draggable="true">
+				<div class="card-title">HKEX TRADING CALENDAR</div>
+				<div id="calendar"></div>
+			</div>
+			<div class="card" draggable="true">
+				<div class="card-title">QUICK LINKS</div>
+				<div class="card-text">
+					<h3>Title</h3>
+					<span>Block 4</span>
+				</div>
+			</div>
+			<div class="card" draggable="true">
+				<div class="card-title">WHAT'S ON</div>
+				<video id="my-video" class="video-js vjs-big-play-centered" controls preload="none" width="740" height="400" poster="https://www.hkex.com.hk/-/media/HKEX-Market/News/News-Release/2017/170703news/DAV_7547s.jpg?h=393&w=590&la=en&hash=83545763D04166B8B1B70804B359624B3C36C65E"
+				 data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+					<source src="http://view.vzaar.com/11900389/video" type="video/mp4">
+				</video>
+				<h2 class="video-title">HKEX Celebrates 17th Anniversary</h2>
+				<p class="content">HKEX welcomed friends from the market to celebrate its 17th birthday on 12 June 2017.</p>
+				<p class="date">16 Jun 2016</p>
+				<a class="card-more video-more" href="#">View More</a>
+			</div>
+
+			<!-- a card that is not draggable -->
+			<div class="card" title="not draggable. sorry ;-)" draggable="false">
+				<div class="card-title">faqs</div>
+				<div class="card-text">
+					<h3>not draggable. sorry ;-)</h3>
+					<span>Block 6</span>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="node_modules/moment/min/moment.min.js"></script>
 	<script src="./src/dragable-control/index.js"></script>
 	<script src="./src/calendar/calendar.js"></script>
-</head>
-
-<body>
-	<div class="hkex-widgets">
-		<div class="card-placeholder tpl-placeholder">
-		</div>
-		<!-- cards to sort -->
-		<div class="card" draggable="true">
-			<div class="card-title">HANG SENG INDEX</div>
-			<div class="card-text">
-				<h3>Title</h3>
-				<span>Block 1</span>
-			</div>
-		</div>
-		<div class="card" draggable="true">
-			<div class="card-title">NEWS</div>
-			<div class="card-text">
-				<h3>Title</h3>
-				<span>Block 2</span>
-			</div>
-		</div>
-		<div class="card" draggable="true">
-			<div class="card-title">HKEX TRADING CALENDAR</div>
-			<div id="calendar"></div>
-		</div>
-		<div class="card" draggable="true">
-			<div class="card-title">QUICK LINKS</div>
-			<div class="card-text">
-				<h3>Title</h3>
-				<span>Block 4</span>
-			</div>
-		</div>
-		<div class="card" draggable="true">
-			<div class="card-title">whats on</div>
-			<div class="card-text">
-				<h3>Title</h3>
-				<span>Block 5</span>
-			</div>
-		</div>
-
-		<!-- a card that is not draggable -->
-		<div class="card" title="not draggable. sorry ;-)" draggable="false">
-			<div class="card-title">faqs</div>
-			<div class="card-text">
-				<h3>not draggable. sorry ;-)</h3>
-				<span>Block 6</span>
-			</div>
-		</div>
-	</div>
-
+	<script src="node_modules/d3/build/d3.js"></script>
+	<script src='src/scripts/market-data.js'></script>
+	<script src='src/scripts/auto-complete.js'></script>
+	<script src='src/scripts/profile.js'></script>
+	<script src="./src/video/video.min.js"></script>
 </body>
 
 </html>
