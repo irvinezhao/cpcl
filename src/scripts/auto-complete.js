@@ -135,7 +135,6 @@ var autoComplete = (function () {
 					var s = '';
 					for (var i = 0; i < data.length; i++) s += o.renderItem(data[i], val);
 					that.sc.innerHTML = s;
-					debugger
 					that.updateSC(0);
 				} else
 					that.sc.style.display = 'none';

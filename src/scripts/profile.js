@@ -1,3 +1,5 @@
+
+// profile
 let showProfileEl = document.querySelector('.profile-more-details')
 showProfileEl.addEventListener('click', function () {
 	let profileDropdownEl = document.querySelector('.profile-dropdown')
@@ -13,19 +15,21 @@ showProfileEl.addEventListener('click', function () {
 	});
 });
 
+// notification
+let showNotificationEl = document.querySelector('.notification-icon')
+showNotificationEl.addEventListener('click', function () {
+	let notificationDropdownEl = document.querySelector('.notification-dropdown')
+	let arrow = document.createElement('div');
+	arrow.setAttribute('class', 'notification-dropdown-arrow')
+	notificationDropdownEl.appendChild(arrow)
+	notificationDropdownEl.classList.toggle('show')
+});
+
+// search
 let showSearchEl = document.querySelector('.search-icon')
 showSearchEl.addEventListener('click', function () {
 	let searchDropdownEl = document.querySelector('.search-dropdown')
-	let arrow = document.createElement('div');
-	arrow.setAttribute('class', 'search-dropdown-arrow')
-	searchDropdownEl.appendChild(arrow)
 	searchDropdownEl.classList.toggle('show')
-	// let searchBlockEl = document.querySelector('.topbar__search-block')
-
-	// let dropdownItemEl = document.querySelectorAll('.profile-dropdown-item')
-	// dropdownItemEl.forEach(function (i) {
-	// 	i.style.width = searchBlockEl.offsetWidth - 3 + 'px';
-	// });
 });
 
 new autoComplete({

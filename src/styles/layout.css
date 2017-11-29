@@ -1,10 +1,38 @@
-.hkex-left-menu{
-	width: 253px;
-    height: 1643px;
-    background: #10416C;
-    float: left;
-    overflow: hidden;
+* {
+  box-sizing: border-box;
 }
+
+template {
+  display: none;
+  /* IE support */
+}
+
+body {
+  font-family: FSElliotPro-Bold, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #dadada;
+}
+
+.hkex-left-menu {
+  width: 253px;
+  height: 1643px;
+  background: #10416C;
+  float: left;
+  overflow: hidden;
+}
+
 .hkex-right {
-	margin-left: 253px;
+  margin-left: 253px;
 }

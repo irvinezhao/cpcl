@@ -41,12 +41,12 @@
 	text-align: right;
 }
 
-.top-information-chart {
+.information-chart {
 	display: inline-block;
 	padding: 0 30px;
 }
 
-.top-information-chart:last-child {
+.information-chart:last-child {
 	border-left: 1px solid #D1DDE6;
 }
 
@@ -109,7 +109,7 @@
 	display: none;
 	width: 500px;
 	position: absolute;
-	left: -90px;
+	left: -85px;
 }
 
 .search-input {
@@ -142,6 +142,18 @@
 	background-size: 18px 18px;
 }
 
+.autocomplete-suggestions::-webkit-scrollbar {
+	width: 5px;
+}
+
+.autocomplete-suggestions::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0.04)
+}
+
+.autocomplete-suggestions::-webkit-scrollbar-thumb {
+	background: #dadada
+}
+
 .topbar__notification-block {
 	border-left: 1px solid #DADADA;
 	width: 5%;
@@ -157,7 +169,76 @@
 	height: 22px;
 	margin: 27px;
 }
+.notification-dropdown {
+	position: absolute;
+	display: none;
+    z-index: 1000;
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    background-color: #fff;
+    right: 0;
+    top: 76px;
+    border: 1px solid #DADADA;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .15), 0 0 4px 0 rgba(0, 0, 0, .2), 0 12px 12px 0 rgba(0, 0, 0, .15);
+}
+.notification-dropdown-arrow {
+	position: absolute;
+	top: -5px;
+	left: 90%;
+	margin-left: -2px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 5px 5px 5px;
+	border-color: transparent transparent rgba(164, 164, 164, 1) transparent;
+}
+.notification-dropdown-item {
+	display: inline-block;
+    min-width: 420px;
+    text-decoration: none;
+	font-size: 14px;
+	padding-left: 45px;
+	background: #fff url('../images/search.svg') no-repeat 10px center;
+	background-size: 18px 18px;
+}
+.notification-dropdown-item:nth-child(n) {
+	border-left: 5px solid pink;
+}
+.notification-dropdown-item:nth-child(2n) {
+	border-left: 5px solid greenyellow;
+}
+.notification-dropdown-item p {
+	margin: 0;
+	line-height: 20px;
+}
 
+.notification-details-text {
+	padding-top: 10px;
+	padding-right: 10px;
+	color: #10416c;
+	font-size: 14px;
+}
+.notification-details-time {
+	padding-bottom: 10px;
+	color: #567494;
+	font-size: 12px;
+}
+.notification-details-link {
+	font-weight: 600;
+	color: #48A7D7;
+	text-decoration: underline;
+}
+.notification-view-more {
+	height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-decoration: none;
+	color: #10416C;
+	background: url('../images/arrow-right.svg') no-repeat 85% center;
+	float: right;
+	padding-right: 30px;
+}
 .topbar__profile-block {
 	border-left: 1px solid #DADADA;
 	font-weight: 600;

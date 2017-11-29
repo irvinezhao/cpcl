@@ -1,18 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-template {
-  display: none;
-  /* IE support */
-}
-
-body {
-  font-family: FSElliotPro-Bold, sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
 .hkex-widgets-section {
   background: #eee;
   padding: 30px;
